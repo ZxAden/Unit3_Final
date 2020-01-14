@@ -15,7 +15,7 @@ int backgroundR = 209;
 int backgroundG = 153;
 int backgroundB = 198;
 float colorConstrain;
-boolean stars = false;
+boolean stars = true;
 void setup() {
   fullScreen();
   //size(640, 540);
@@ -48,6 +48,7 @@ void draw() {
   {
     translate(width/2, height/2);
     _Sky.SuperFormula();
+    _Sky.Key();
     rotate(radians(-25));
     planetsB = new ArrayList<Planet>();
     planetsT = new ArrayList<Planet>();

@@ -28,7 +28,7 @@ class Sky
     beginShape();
     for (float theta = 0; theta<=2*PI; theta += 0.001)
     {
-      float rad = r(theta, a, b, m, n1, sin(t)*2+0.5, cos(t)*2+0.5);
+      float rad = r(theta, a, b, m, n1, sin(t)*2+0.8, cos(t)*2+0.8);
       float x = rad * cos(theta)*50;
       float y = rad * sin(theta)*50;
       vertex(x, y);
@@ -40,5 +40,32 @@ class Sky
   {
     return pow(pow(abs(cos(m * theta / 4.0) / a), n2) + 
       pow(abs(sin( m *theta / 4.0) / b), n3), - 1 / n1);
+  }
+  void Key()
+  {
+    if (key == '1')
+    {
+      m = 2;
+    }
+    if (key == '2')
+    {
+      m = 4;
+    }
+    if (key == '3')
+    {
+      m = 8;
+    }
+    if (key == '4')
+    {
+      m = 12;
+    }
+    if (key == '5')
+    {
+      m = 18;
+    }
+    if (key == '6')
+    {
+      m = 6;
+    }
   }
 }
